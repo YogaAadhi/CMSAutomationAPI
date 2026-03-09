@@ -36,6 +36,9 @@ namespace CMSAutomationAPI.Model
         [Column("created_at")]
         public DateTime? CreatedAt { get; set; }
 
+        [Column("updated_at")]
+        public DateTime? UpdatedAt { get; set; }
+
         [Column("codeset_name")]
         public string? CodeSetName { get; set; }
 

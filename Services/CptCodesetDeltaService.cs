@@ -1,5 +1,6 @@
 ﻿using CMSAutomationAPI.Model;
 using CMSAutomationAPI.Repository;
+using CMSAutomationAPI.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace CMSAutomationAPI.Services
@@ -14,12 +15,6 @@ namespace CMSAutomationAPI.Services
         {
             _factory = factory;
             _repository = _factory.CreateForWbc();
-
-
-
-
-
-
         }
 
         public IQueryable<CptCodesetDelta> GetAll(bool? isActive = null,
@@ -45,5 +40,8 @@ namespace CMSAutomationAPI.Services
         {
             return _repository.ExecuteRawQuery(sql, parameters);
         }
+
+       
+
     }
 }

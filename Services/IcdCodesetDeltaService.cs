@@ -34,5 +34,13 @@ namespace CMSAutomationAPI.Services
             return data;
         }
 
+
+
+        public int ExecuteSqlAsync(string sql, params object[] parameters)
+        {
+            return _repository.ExecuteRawQuery(sql, parameters);
+        }
+
+
     }
 }
