@@ -1,0 +1,6 @@
+@CMSAutomationAPI_HostAddress = http://localhost:5003
+
+GET {{CMSAutomationAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
