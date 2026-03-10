@@ -15,7 +15,7 @@ namespace CMSAutomationAPI.Controllers
             _cptCodesMasterDeltaService = cptCodesMasterDeltaService;
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("cpt-codeset-master-index")]
         [Produces(typeof(ListModelResponse<CPTMasterDelta_ViewModel>))]
         public async Task<IActionResult> CPTCodeMasterIndex([FromBody] WorkBenchQueryParams queryParams)
         {
@@ -55,7 +55,7 @@ namespace CMSAutomationAPI.Controllers
 
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("cpt-codeset-master-bulkupdate")]
         [Produces(typeof(ListModelResponse<CPTMasterDelta_ViewModel>))]
         public async Task<IActionResult> BulkCPTMasterApprovalAsync(WorkBenchQueryParams queryParams)
         {

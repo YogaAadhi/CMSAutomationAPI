@@ -18,7 +18,7 @@ namespace CMSAutomationAPI.Controllers
             _IcdCodesetDeltaService = icdCodesetDeltaService;
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("cpt-policysubset-delta-index")]
         [Produces(typeof(ListModelResponse<CPTCodeSetDelta_ViewModel>))]
         public async Task<IActionResult> CPTCodesetIndex([FromBody] WorkBenchQueryParams queryParams)
         {
@@ -57,7 +57,7 @@ namespace CMSAutomationAPI.Controllers
 
         }
 
-        [HttpPost("[action]")]
+        [HttpPost("icd-policysubset-delta-index")]
         [Produces(typeof(ListModelResponse<ICDCodeSetDelta_ViewModel>))]
         public async Task<IActionResult> ICDCodesetIndex([FromBody] WorkBenchQueryParams queryParams)
         {
@@ -93,7 +93,7 @@ namespace CMSAutomationAPI.Controllers
         }
 
 
-        [HttpPost("[action]")]
+        [HttpPost("cpt-policysubset-delta-approval")]
         [Produces(typeof(ListModelResponse<CPTCodeSetDelta_ViewModel>))]
         public async Task<IActionResult> BulkCPTApprovalAsync(WorkBenchQueryParams queryParams)
         {
@@ -142,8 +142,7 @@ WHERE cpt_code IN ({codes})";
             return response.ToResponse();
         }
 
-        [HttpPost("[action]")]
-
+        [HttpPost("icd-policysubset-delta-approval")]
         [Produces(typeof(ListModelResponse<ICDCodeSetDelta_ViewModel>))]
         public async Task<IActionResult> BulkICDApprovalAsync(WorkBenchQueryParams queryParams)
         {
