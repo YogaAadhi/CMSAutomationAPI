@@ -14,6 +14,7 @@ namespace CMSAutomationAPI.Data
         public DbSet<CptCodesetDelta> CptCodesetDelta { get; set; }
         public DbSet<RipeCodesets> RipeCodesets { get; set; }
         public DbSet<CPT_CodeSetMapping> CPT_CodeSetMappings { get; set; }
+        public DbSet<CPT_CodesMasterDelta> CPT_CodesMasterDelta { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,9 +30,21 @@ namespace CMSAutomationAPI.Data
 
                 entity.Property(e => e.Id)
          .HasColumnName("id");
-
-               
             });
+
+
+            modelBuilder.Entity<ICD_CodeSetDelta>(entity =>
+            {
+                entity.ToTable("icd_codeset_delta");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+         .HasColumnName("id");
+            });
+
+            modelBuilder.Entity<CPT_CodesMasterDelta>()
+        .HasNoKey();
 
         }
     }

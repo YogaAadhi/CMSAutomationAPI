@@ -5,7 +5,6 @@ namespace CMSAutomationAPI.Services
 {
     public class IcdCodesetDeltaService
     {
-
         IRepository<ICD_CodeSetDelta> _repository;
 
         private readonly RepositoryFactory<ICD_CodeSetDelta> _factory;
@@ -33,8 +32,6 @@ namespace CMSAutomationAPI.Services
 
             return data;
         }
-
-
 
         public int ExecuteSqlAsync(string sql, params object[] parameters)
         {

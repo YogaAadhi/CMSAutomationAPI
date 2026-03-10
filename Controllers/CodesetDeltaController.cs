@@ -161,7 +161,7 @@ WHERE cpt_code IN ({codes})";
 
             var sql = $@"
 UPDATE icd_codeset_delta
-SET status = 'Approved'
+SET status = 'Approved',
 updated_at = NOW()
 WHERE icd_code IN ({codes})";
 
