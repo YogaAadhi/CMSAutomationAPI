@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<CptCodesetDeltaService>();
 builder.Services.AddScoped<IcdCodesetDeltaService>();   
 builder.Services.AddScoped<CptCodesMasterDeltaService>();
+builder.Services.AddScoped<IcdCodesMasterDeltaService>();   
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
